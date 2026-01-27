@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mike Maguire - Musician & Creator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Mike Maguire</h1>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#podcast">Podcast</a></li>
+                <li><a href="#gigs">Gigs</a></li>
+                <li><a href="#contact">Book Me</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#photos">Photos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-content">
+                <h2>Welcome to the Home of Mike Maguire / Heif Dogg</h2>
+                <p>Musician, podcaster, and creator. This is my space, free from algorithms.</p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>Mike Maguire (also known as Heif Dogg)</p>
+                
+                <p>I'm Mike Maguire. Musician, podcaster, writer, and someone who finally decided to stop renting space on the internet and build a home instead.</p>
+
+                <p>This site exists because I wanted to get off social media without vanishing.</p>
+
+                <p>I've spent years playing music in bars, breweries, backyards, living rooms, and rooms that feel electric for exactly the length of a good song. I write and perform original music, and I love reworking familiar songs until they feel alive again. I perform under my own name, and if I'm playing a show, releasing music, or trying something new, it'll live here.</p>
+
+                <p>Some people know me as Heif Dogg—that started as a nickname and stuck, especially on the Hoagie Time podcast, where I'm one of the voices. The show is part comedy, part conversation, part local culture, and part "how did this turn into that?" Episodes, clips, and updates are here so you don't have to chase them around the internet.</p>
+
+                <p>This site is the hub. Gigs, music, podcast stuff, photos, short writing, longer thoughts, and ideas that are still very much in progress. I'm not aiming for perfectly polished. I'm aiming for real, interesting, and moving forward.</p>
+
+                <p>If you're here to book a gig, listen to music, check out the podcast, read something, or just look around—welcome. Everything worth keeping ends up here.</p>
+
+                <p><strong>No algorithms. No endless scroll. Just the work, in one place.</strong></p>
+            </div>
+        </section>
+
+        <!-- Music Section -->
+        <section id="music">
+            <div class="container">
+                <h2>Music</h2>
+                <p>Check out my latest tracks and releases.</p>
+                <div class="music-player">
+                    <!-- You can embed players from SoundCloud, Bandcamp, Spotify, etc. here -->
+                    <p class="placeholder">🎵 Embed your music player here (SoundCloud, Bandcamp, YouTube, etc.)</p>
+                    <!-- Example for later:
+                    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" 
+                    src="https://w.soundcloud.com/player/?url=YOUR_TRACK_URL"></iframe>
+                    -->
+                </div>
+                <div class="music-links">
+                    <a href="#" class="button">Spotify</a>
+                    <a href="#" class="button">Bandcamp</a>
+                    <a href="#" class="button">SoundCloud</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Podcast Section -->
+        <section id="podcast">
+            <div class="container">
+                <h2>Hoagie Time Podcast</h2>
+                <p>Listen to the latest episodes of Hoagie Time!</p>
+                <div class="podcast-player">
+                    <p class="placeholder">🎙️ Embed your podcast player here (Spotify, Apple Podcasts, etc.)</p>
+                    <!-- You can add podcast embed code here later -->
+                </div>
+                <div class="podcast-links">
+                    <a href="#" class="button">Apple Podcasts</a>
+                    <a href="#" class="button">Spotify</a>
+                    <a href="#" class="button">RSS Feed</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gigs Section -->
+        <section id="gigs">
+            <div class="container">
+                <h2>Upcoming Gigs</h2>
+                <div class="gig-list">
+                    <div class="gig">
+                        <h3>Venue Name</h3>
+                        <p class="gig-date">February 15, 2026 - 8:00 PM</p>
+                        <p class="gig-location">City, State</p>
+                        <a href="#" class="button">Get Tickets</a>
+                    </div>
+                    
+                    <div class="gig">
+                        <h3>Another Venue</h3>
+                        <p class="gig-date">March 2, 2026 - 9:00 PM</p>
+                        <p class="gig-location">City, State</p>
+                        <a href="#" class="button">Get Tickets</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact/Booking Section -->
+        <section id="contact">
+            <div class="container">
+                <h2>Book a Gig</h2>
+                <p>Interested in booking me for a show? Fill out the form below and I'll get back to you soon.</p>
+                
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone (optional)</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="venue">Venue/Event Name</label>
+                        <input type="text" id="venue" name="venue">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="date">Preferred Date</label>
+                        <input type="date" id="date" name="date">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Contact Method</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="contact_method" value="email" checked>
+                                Email me
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="contact_method" value="text">
+                                Text me (I'll reach out from my number)
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Tell me about your event, budget, what you're looking for..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="button submit-button">Send Booking Request</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog">
+            <div class="container">
+                <h2>Blog</h2>
+                <div class="blog-posts">
+                    <article class="blog-post">
+                        <h3>Why I Left Social Media</h3>
+                        <p class="post-date">January 27, 2026</p>
+                        <p>Your first blog post content goes here. Talk about your journey away from social media and why you built this site...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </article>
+                    
+                    <article class="blog-post">
+                        <h3>Your Second Post Title</h3>
+                        <p class="post-date">January 20, 2026</p>
+                        <p>A preview of your second post...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photos Section -->
+        <section id="photos">
+            <div class="container">
+                <h2>Photos</h2>
+                <div class="photo-gallery">
+                    <div class="photo-placeholder">Photo 1</div>
+                    <div class="photo-placeholder">Photo 2</div>
+                    <div class="photo-placeholder">Photo 3</div>
+                    <div class="photo-placeholder">Photo 4</div>
+                    <div class="photo-placeholder">Photo 5</div>
+                    <div class="photo-placeholder">Photo 6</div>
+                </div>
+                <p class="photo-note">Replace these placeholders with your actual images by adding them to an "images" folder</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Mike Maguire. Built by me, owned by me.</p>
+            <div class="footer-links">
+                <a href="mailto:mikemaguirephl@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
