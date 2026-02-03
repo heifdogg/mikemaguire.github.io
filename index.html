@@ -1,11 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
-  <meta charset="UTF-8">
-  <title>Test</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mike Maguire | Delco Music & Podcast</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <h1>If you see this, HTML is working</h1>
-  <p>Your page was broken in the &lt;head&gt; section.</p>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <img src="images/logo.png" alt="Mike Maguire Delco Logo" class="logo">
+      <div>
+        <h1>Mike Maguire</h1>
+        <p class="subtitle">Delco Music & Hoagie Time Podcast</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#music">Music</a>
+      <a href="#podcast">Podcast</a>
+      <a href="#gigs">Gigs</a>
+      <a href="#contact">Book</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h2>No algorithms. No noise.</h2>
+    <p>Music, live dates, and the Hoagie Time Podcast — all in one place.</p>
+
+    <div class="hero-buttons">
+      <a href="#gigs" class="button">Live Dates</a>
+      <a href="#contact" class="button outline">Book a Gig</a>
+    </div>
+  </div>
+</section>
+
+<!-- MUSIC -->
+<section id="music">
+  <div class="container card">
+    <h2>Music</h2>
+    <p>Originals, covers, and everything in between.</p>
+
+    <div class="link-row">
+      <a href="#" class="button">Spotify</a>
+      <a href="https://mikemaguire.bandcamp.com" class="button outline">Bandcamp</a>
+      <a href="#" class="button outline">YouTube</a>
+    </div>
+  </div>
+</section>
+
+<!-- PODCAST -->
+<section id="podcast">
+  <div class="container card">
+    <h2>Hoagie Time Podcast</h2>
+    <p>Comedy, conversation, and Delco nonsense.</p>
+
+    <iframe
+      src="https://open.spotify.com/embed/show/4VMRmCAVZjIwiWuw17OJLO"
+      width="100%"
+      height="152"
+      style="border-radius:12px"
+      frameborder="0"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy">
+    </iframe>
+
+    <div class="link-row">
+      <a href="https://open.spotify.com/show/4VMRmCAVZjIwiWuw17OJLO" class="button">Spotify</a>
+      <a href="https://podcasts.apple.com/us/podcast/hoagie-time-podcast/id1635952595" class="button outline">Apple Podcasts</a>
+      <a href="https://www.youtube.com/@hoagietime" class="button outline">YouTube</a>
+    </div>
+  </div>
+</section>
+
+<!-- GIGS -->
+<section id="gigs">
+  <div class="container card">
+    <h2>Live Dates</h2>
+
+    <div class="gig">
+      <strong>Feb 15, 2026</strong> — 8:00 PM<br>
+      <span>Venue Name · City, State</span>
+    </div>
+
+    <div class="gig">
+      <strong>Mar 2, 2026</strong> — 9:00 PM<br>
+      <span>Another Venue · City, State</span>
+    </div>
+
+    <p class="note">
+      To update gigs, edit this section in <code>index.html</code>.
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container card">
+    <h2>Book a Gig</h2>
+    <p>Fill this out and it comes straight to me.</p>
+
+    <form action="https://formspree.io/f/mzdrovod" method="POST">
+      <input type="hidden" name="_subject" value="New Gig Inquiry">
+      <input type="hidden" name="_redirect" value="thanks.html">
+      <input type="text" name="_gotcha" style="display:none">
+
+      <label>Name *</label>
+      <input type="text" name="name" required>
+
+      <label>Email *</label>
+      <input type="email" name="email" required>
+
+      <label>Venue / Event</label>
+      <input type="text" name="venue">
+
+      <label>Date & Time</label>
+      <input type="text" name="date">
+
+      <label>Message *</label>
+      <textarea name="message" rows="5" required></textarea>
+
+      <button type="submit" class="button">Send Booking Request</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer">
+    <p>© 2026 Mike Maguire · Built and owned by me</p>
+    <p><a href="mailto:mikemaguirephl@gmail.com">Email</a></p>
+  </div>
+</footer>
+
 </body>
 </html>
