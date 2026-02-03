@@ -1,253 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mike Maguire - Musician & Creator</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <h1>Mike Maguire</h1>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#music">Music</a></li>
-                <li><a href="#podcast">Podcast</a></li>
-                <li><a href="#gigs">Gigs</a></li>
-                <li><a href="#contact">Book Me</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#photos">Photos</a></li>
-            </ul>
-        </nav>
-    </header>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mike Maguire | Delco Music, Podcast, Gigs</title>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="hero">
-            <div class="hero-content">
-                <h2>Welcome to the Home of Mike Maguire / Heif Dogg</h2>
-                <p>Musician, podcaster, and creator. This is my space, free from algorithms.</p>
-            </div>
-        </section>
+  <!-- Fonts: heritage heading + modern body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-        <!-- About Section -->
-        <section id="about">
-            <div class="container">
-                <h2>About Me</h2>
-                <p>Mike Maguire (also known as Heif Dogg)</p>
-                
-                <p>I'm Mike Maguire. Musician, podcaster, writer, and someone who finally decided to stop renting space on the internet and build a home instead.</p>
+  <style>
+    :root {
+      --cream: #f6f2eb;
+      --paper: #ffffff;
+      --ink: #1a1a1a;
+      --navy: #1f2a44;
+      --burgundy: #7a1f2b;
+      --gold: #d4af37;
+      --shadow: 0 10px 30px rgba(0,0,0,0.10);
+      --radius: 14px;
+      --max: 1040px;
+    }
 
-                <p>This site exists because I wanted to get off social media without vanishing.</p>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.6;
+    }
 
-                <p>I've spent years playing music in bars, breweries, backyards, living rooms, and rooms that feel electric for exactly the length of a good song. I write and perform original music, and I love reworking familiar songs until they feel alive again. I perform under my own name, and if I'm playing a show, releasing music, or trying something new, it'll live here.</p>
+    a { color: inherit; text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-                <p>Some people know me as Heif Dogg—that started as a nickname and stuck, especially on the Hoagie Time podcast, where I'm one of the voices. The show is part comedy, part conversation, part local culture, and part "how did this turn into that?" Episodes, clips, and updates are here so you don't have to chase them around the internet.</p>
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
 
-                <p>This site is the hub. Gigs, music, podcast stuff, photos, short writing, longer thoughts, and ideas that are still very much in progress. I'm not aiming for perfectly polished. I'm aiming for real, interesting, and moving forward.</p>
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(246, 242, 235, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
 
-                <p>If you're here to book a gig, listen to music, check out the podcast, read something, or just look around—welcome. Everything worth keeping ends up here.</p>
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
+    }
 
-                <p><strong>No algorithms. No endless scroll. Just the work, in one place.</strong></p>
-            </div>
-        </section>
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 220px;
+    }
 
-        <!-- Music Section -->
-        <section id="music">
-            <div class="container">
-                <h2>Music</h2>
-                <p>Check out my latest tracks and releases.</p>
-                <div class="music-player">
-                    <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=4092421508/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://mikemaguire.bandcamp.com/album/right-on-time">Right On Time by Mike Maguire</a></iframe>
-                </div>
-                <div class="music-links">
-                    <a href="https://music.apple.com/us/album/right-on-time/561511323" class="button">Apple</a>
-                    <a href="https://open.spotify.com/album/4UL7AbuglGYoz45yzCY5x9" class="button">Spotify</a>
-                    <a href="https://mikemaguire.bandcamp.com" class="button">Bandcamp</a>
-                </div>
-            </div>
-        </section>
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 2px solid rgba(0,0,0,0.12);
+      background: var(--paper);
+      object-fit: cover;
+    }
 
-        <!-- Podcast Section -->
-<!-- Podcast Section -->
-<section id="podcast">
-  <div class="container">
-    <h2>Hoagie Time Podcast</h2>
-    <p>Listen to the latest episodes of Hoagie Time!</p>
+    .brand-title {
+      font-family: Cinzel, serif;
+      letter-spacing: 0.04em;
+      color: var(--navy);
+      font-weight: 700;
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.1;
+    }
 
-    <div class="podcast-player">
-      <iframe
-        data-testid="embed-iframe"
-        style="border-radius:12px"
-        src="https://open.spotify.com/embed/show/4VMRmCAVZjIwiWuw17OJLO?utm_source=generator"
-        width="100%"
-        height="152"
-        frameborder="0"
-        allowfullscreen
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy">
-      </iframe>
-    </div>
+    .brand-subtitle {
+      margin: 0;
+      font-size: 12px;
+      color: rgba(0,0,0,0.70);
+    }
 
-    <div class="podcast-links">
-      <a href="https://podcasts.apple.com/us/podcast/hoagie-time-podcast/id1635952595"
-         class="button"
-         target="_blank"
-         rel="noopener">
-        Apple Podcasts
-      </a>
-      <a href="https://open.spotify.com/show/4VMRmCAVZjIwiWuw17OJLO"
-         class="button"
-         target="_blank"
-         rel="noopener">
-        Spotify
-      </a>
-      <a href="https://www.youtube.com/@hoagietime"
-         class="button"
-         target="_blank"
-         rel="noopener">
-        YouTube
-      </a>
-    </div>
-  </div>
-</section>
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 14px;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
 
-        <!-- Gigs Section -->
-<section id="gigs">
-  <div class="container">
-    <h2>Upcoming Gigs</h2>
+    .nav-links a {
+      font-weight: 600;
+      color: rgba(0,0,0,0.72);
+      padding: 8px 10px;
+      border-radius: 10px;
+    }
 
-    <div class="gig">
-      <span class="gig-date">Feb 3, 2026</span>
-      <span class="gig-time">5:30 – 7:30 PM</span>
-      <span class="gig-venue">Dom & Mia's</span>
-      <span class="gig-location">Springfield, PA</span>
-    </div>
+    .nav-links a:hover {
+      background: rgba(31, 42, 68, 0.08);
+      text-decoration: none;
+      color: var(--navy);
+    }
 
-    <div class="gig">
-      <span class="gig-date">Feb 6, 2026</span>
-      <span class="gig-time">8:00 – 11:00 PM</span>
-      <span class="gig-venue">Saxer's</span>
-      <span class="gig-location">Springfield, PA</span>
-    </div>
+    section {
+      padding: 64px 0;
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
 
-      <div class="gig">
-      <span class="gig-date">Feb 7, 2026</span>
-      <span class="gig-time">6:00 – 9:00 PM</span>
-      <span class="gig-venue">Barnaby's Aston</span>
-      <span class="gig-location">Aston, PA</span>
-    </div>
-      
+    .card {
+      background: var(--paper);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
 
-  </div>
-</section>
+    .hero {
+      padding: 70px 0 54px;
+      border-top: none;
+    }
 
-        <!-- Contact/Booking Section -->
-        <section id="contact">
-            <div class="container">
-                <h2>Book a Gig</h2>
-                <p>Interested in booking me for a show? Fill out the form below and I'll get back to you soon.</p>
-                
-                <form action="https://formspree.io/f/mzdrovod" method="POST" class="contact-form">
-  <input type="hidden" name="_subject" value="New Gig Inquiry from mikemaguire site">
-  <input type="hidden" name="_redirect" value="thanks.html">
-  <input type="text" name="_gotcha" style="display:none">
-                    <div class="form-group">
-                        <label for="name">Name *</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Phone (optional)</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="venue">Venue/Event Name</label>
-                        <input type="text" id="venue" name="venue">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="date">Preferred Date</label>
-                        <input type="date" id="date" name="date">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Contact Method</label>
-                        <div class="radio-group">
-                            <label class="radio-label">
-                                <input type="radio" name="contact_method" value="email" checked>
-                                Email me
-                            </label>
-                            <label class="radio-label">
-                                <input type="radio" name="contact_method" value="text">
-                                Text me (I'll reach out from my number)
-                            </label>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="Tell me about your event, budget, what you're looking for..."></textarea>
-                    </div>
-                    
-                    <button type="submit" class="button submit-button">Send Booking Request</button>
-                </form>
-            </div>
-        </section>
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 28px;
+      align-items: center;
+    }
 
-        <!-- Blog Section -->
-        <section id="blog">
-            <div class="container">
-                <h2>Blog</h2>
-                <div class="blog-posts">
-                    <article class="blog-post">
-                        <h3>Why I Left Social Media</h3>
-                        <p class="post-date">January 27, 2026</p>
-                        <p>Your first blog post content goes here. Talk about your journey away from social media and why you built this site...</p>
-                        <a href="#" class="read-more">Read More</a>
-                    </article>
-                    
-                    <article class="blog-post">
-                        <h3>Your Second Post Title</h3>
-                        <p class="post-date">January 20, 2026</p>
-                        <p>A preview of your second post...</p>
-                        <a href="#" class="read-more">Read More</a>
-                    </article>
-                </div>
-            </div>
-        </section>
+    .hero-logo {
+      width: 100%;
+      max-width: 360px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 18px;
+      background: var(--paper);
+      border: 1px solid rgba(0,0,0,0.08);
+      box-shadow: var(--shadow);
+    }
 
-        <!-- Photos Section -->
-        <section id="photos">
-            <div class="container">
-                <h2>Photos</h2>
-                <div class="photo-gallery">
-                    <div class="photo-placeholder">Photo 1</div>
-                    <div class="photo-placeholder">Photo 2</div>
-                    <div class="photo-placeholder">Photo 3</div>
-                    <div class="photo-placeholder">Photo 4</div>
-                    <div class="photo-placeholder">Photo 5</div>
-                    <div class="photo-placeholder">Photo 6</div>
-                </div>
-                <p class="photo-note">Replace these placeholders with your actual images by adding them to an "images" folder</p>
-            </div>
-        </section>
-    </main>
+    .hero h1 {
+      font-family: Cinzel, serif;
+      color: var(--navy);
+      letter-spacing: 0.04em;
+      font-size: 44px;
+      margin: 0 0 10px;
+      line-height: 1.05;
+    }
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Mike Maguire. Built by me, owned by me.</p>
-            <div class="footer-links">
-                <a href="mailto:mikemaguirephl@gmail.com">Email</a>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+    .hero .tagline {
+      font-size: 18px;
+      color: rgba(0,0,0,0.75);
+      margin: 0 0 18px;
+    }
+
+    .hero .cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 18px;
+      border-radius: 10px;
+      border: 2px solid var(--burgundy);
+      background: var(--burgundy);
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: transform 0.05s ease, background 0.15s ease, border-color 0.15s ease;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: #000;
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--navy);
+      border-color: rgba(31, 42, 68, 0.35);
+    }
+
+    .button.secondary:hover {
+      background: rgba(31, 42, 68, 0.08);
+      border-color: rgba(31, 42, 68, 0.55);
+      color: var(--navy);
+    }
+
+    h2 {
+      font-family: Cinzel, serif;
+      color: var(--navy);
+      letter-spacing: 0.04em;
+      margin: 0 0 12px;
+      font-size: 30px;
+    }
+
+    .section-lead {
+      margin: 0 0 20px;
+      color: rgba(0,0,0,0.72);
+      font-size: 16px;
+    }
+
+    .rule {
+      height: 3px;
+      width: 86px;
+      background: var(--gold);
+      border-radius: 999px;
+      margin: 10px 0 18px;
+    }
+
+    .embed-frame {
+      border: 0;
+      width: 100%;
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    .links-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .gig-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .gig {
+      padding: 18px;
+      border-radius: 12px;
+      border: 1px solid rgba(0,0,0,0.08);
+      background: rgba(255,255,255,0.72);
+    }
+
+    .gig-top {
+      display: flex;
+      gap: 12px;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .gig h3 {
+      margin: 0;
+      font-size: 18px;
+      color: var(--navy);
+      font-weight: 800;
+    }
+
+    .gig-meta {
+      display: grid;
+      grid-template-columns: 140px 160px 1fr;
+      gap: 10px;
+      margin-top: 10px;
+      color: rgba(0,0,0,0.75);
+      font-weight: 600;
+    }
+
+    .gig-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: rgba(0,0,0,0.55);
+      font-weight: 800;
+      margin-bottom: 3px;
+    }
+
+    .gig-actions {
+      margin-top: 14px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    form.contact-form {
+      display: grid;
+      gap: 14px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 800;
+      margin-bottom: 6px;
+      color: rgba(0,0,0,0.78);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(0,0,0,0.18);
+      background: #fff;
+      font-size: 15px;
+    }
+
+    .radio-group {
+      display: flex;
+      gap: 14px;
+      flex-wrap
